@@ -5,6 +5,6 @@ DigitalSensor::DigitalSensor(int pin){
 }
 
 void DigitalSensor::see(){
-    this->state = digitalRead(this->pin);
+    this->state = digitalRead(this->pin); //precisa do arduino
 }
 
