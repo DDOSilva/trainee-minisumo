@@ -16,6 +16,12 @@ void Vision::update(){
     DigitalSensor sensor_r(this->pin_r);
     DigitalSensor sensor_fr(this->pin_fr);
 
+    sensor_fl.update();
+    sensor_l.update();
+    sensor_f.update();
+    sensor_r.update();
+    sensor_fr.update();
+
     if (sensor_f.state) enemy_position = "Front", last_position = "Front";
     else if(sensor_l.state) enemy_position = "Left", last_position = "Left";
     else if(sensor_r.state) enemy_position = "Right", last_position = "Right";
