@@ -1,21 +1,21 @@
 #include "motor.h"
 
-Motor::Motor(const int pin):_pin(pin),_speed(130) { //inicializando _pin com valor pin e _speed com valor 130
-    
-    pinMode(_pin, OUTPUT);
-    digitalWrite(_pin, LOW);
+Motor::Motor(const int pinA):_pin1(pinA),_speed(130) { //inicializando _pin com valor pin e _speed com valor 130
+
+    pinMode(_pin1, OUTPUT); //definindo como entrada
+    digitalWrite(_pinA, LOW); //desligado
 }
 
 void Motor::motorOn() {
-    digitalWrite(_pin, HIGH);
+    digitalWrite(_pinA, HIGH);
 }
 
 void Motor::motorOff() {
-    digitalWrite(_pin, LOW);
+    digitalWrite(_pinA, LOW);
 }
 
-void Motor::motorSpeed(int speed) {
+void Motor::motor1Speed(int speed) {
 
     _speed = speed;
-    analogWrite(_pin, _speed);
+    analogWrite(_pinA, _speed);
 }
