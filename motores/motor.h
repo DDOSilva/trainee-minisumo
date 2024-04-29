@@ -5,17 +5,15 @@
 
 class Motor {
     
-    private:
-        int _speed;
-        const int _pin1, _pin2;
-        bool statePin;
     public:
-        void motorOn();
-        void motorOff();
+        int speed, pwm;
+        const int pinChannel, pin1, pin2; 
+        bool statePin1, statePin2;
+
         void motorSpeed(int speed = 130);
         
         void update ();
-        Motor (const int pin1, pin2);
+        Motor (const int pinChannel);
 
 };
 

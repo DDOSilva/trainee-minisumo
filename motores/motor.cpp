@@ -8,7 +8,7 @@ Motor::Motor(const int pinA):_pin1(pinA),_speed(130) { //inicializando _pin com 
 void Motor::motor1Speed(int speed) {
 
     this->speed = speed;
-    analogWrite(pinA, speed);
+    analogWrite(pinChannel, speed);
 }
 
 Motor::update(){
