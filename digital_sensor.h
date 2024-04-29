@@ -9,7 +9,7 @@ class DigitalSensor{
         int pin;
         bool state;
 
-        void see ();
+        void update ();
         DigitalSensor (int pin);
 };
 
