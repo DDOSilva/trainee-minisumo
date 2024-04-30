@@ -6,14 +6,16 @@
 class Motor {
     
     public:
-        int speed, pwm;
-        const int pinChannel, pin1, pin2; 
-        bool statePin1, statePin2;
+        int speed;
+        int pwm;
+        int pinChannel
+        int pin1;
+        int pin2; 
 
         void motorSpeed(int speed = 130);
         
         void update ();
-        Motor (const int pinChannel);
+        Motor (int pinChannel);
 
 };
 
