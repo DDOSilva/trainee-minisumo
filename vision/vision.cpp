@@ -1,5 +1,5 @@
 #include "vision.h"
-#include "digital_sensor.cpp"
+#include "digital_sensor.h"
 
 Vision::Vision(int pin_fl, int pin_l, int pin_f, int pin_r, int pin_fr){
     this->pin_fl = pin_fl;
