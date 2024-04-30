@@ -1,21 +1,19 @@
 #ifndef MOTOR_H
 #define MOTOR_H
-#include <Arduino.h>
-#include <iostream>
 
 class Motor {
     
     public:
         int speed;
-        int pwm;
-        int pinChannel
-        int pin1;
-        int pin2; 
+        int pin_pwm;
+        int pin_Ch;
+        int pin_1;
+        int pin_2; 
+        int cSpeed;
+        int speed_max = 100;
 
-        void motorSpeed(int speed = 130);
-        
         void update ();
-        Motor (int pinChannel);
+        Motor (int pin_ch, int pin_1, int pin_2 int pin_pwm, int speed);
 
 };
 

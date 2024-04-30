@@ -9,7 +9,7 @@ namespace ms_State {
         STOP, // 0
         START // 1
     };
-}
+};
 
 class Microstarter {
     
