@@ -7,7 +7,7 @@ class Microstarter {
     
     public:
         bool signal;
-        const int pin;
+        int pin;
         void uptade();
         void Microstarter(const int pin);
 
