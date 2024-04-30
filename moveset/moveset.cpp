@@ -1,32 +1,30 @@
-#include "motor.h"
-#include "digital_sensor.h"
-#include "vision.h " //provavelmente deve ter que incluir mais coisas
+#include <iostream>
+#include <Arduino.h>
 
-#define motorPinLeft 
-#define motorPinRight // faltando os valores dos pinos, só deixei a "carcaça" pronta 
+#include <motor.h>
+#include <vision.h>
+#include <moveset.h>
 
-void goLeft () {
+Moveset::Moveset() {
+};
 
-}
+void Moveset::Moveset() {
 
-void goRight () {
-
-}
-
-void goForward () {
-
-}
-
-void goBack () {
-    
-}
-
-Motor mRight(motorPinRight), mLeft(motorPinLeft);
-void setup () {
-
-}
-
-void loop () {
-
+    if(Vision.enemy_position == "Front"){
+        rightMotor.setspeed(100);
+        leftMotor.setspeed(100);
+    } else if (Vision.enemy_position == "Full left") {
+        rightMotor.setspeed(100);
+        leftMotor.setspeed(-100);
+    } else if (Vision.enemy_position == "Full right") {
+        rightMotor.setspeed(-100);
+        leftMotor.setspeed(100);
+    } else if (Vision.enemy_position == "Left") {
+        rightMotor.setspeed(90);
+        leftMotor.setspeed(-15);
+    } else if (Vision.enemy_position == "Right") {
+        rightMotor.setspeed(-15);
+        leftMotor.setspeed(90);
+    }
 
 }
