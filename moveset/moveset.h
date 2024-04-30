@@ -11,7 +11,7 @@ class Moveset{
         Vision vision; // precisava declarar aqui?
 
         void update();
-        Strat(Motor rightMotor, Motor leftMotor, Vision vision); // devia usar ponteiros??
+        Strat(Motor rightMotor, Motor leftMotor, Vision vision); // devia usar ponteiros?
 
 };
 

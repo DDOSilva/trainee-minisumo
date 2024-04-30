@@ -6,6 +6,7 @@
 #include <moveset.h>
 
 Moveset::Moveset() {
+    
 };
 
 void Moveset::Moveset() {
