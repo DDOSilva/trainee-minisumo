@@ -9,8 +9,8 @@
 
 Moveset::Moveset() {};
 
-void Moveset::update(Motor &rightMotor, Motor &leftMotor, Vision &vision, Microstarter &uStart, DigitalSensor &fSensor
-        DigitalSensor &rSensor, DigitalSensor &full_rSensor, DigitalSensor &lSensor, DigitalSensor &full_lSensor) {
+void Moveset::update(Motor &rightMotor, Motor &leftMotor, Vision &vision, Microstarter &uStart, DigitalSensor &sensor_l
+        DigitalSensor &sensor_r, DigitalSensor &sensor_fl, DigitalSensor &sensor_fr, DigitalSensor &sensor_f) {
 
     if(vision.enemy_position == EnemyPosition::FRONT){
         rightMotor.setspeed(100);

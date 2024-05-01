@@ -35,15 +35,15 @@ class Moveset{
         Motor leftMotor;
         Vision vision; 
         Microstarter uStart;
-        DigitalSensor fSensor;
-        DigitalSensor rSensor;
-        DigitalSensor full_rSensor;
-        DigitalSensor lSensor;
-        DigitalSensor full_lSensor;
+        DigitalSensor sensor_f;
+        DigitalSensor sensor_r;
+        DigitalSensor sensor_fr;
+        DigitalSensor sensor_l;
+        DigitalSensor sensor_fl;
 
 
-        void update(Motor &rightMotor, Motor &leftMotor, Vision &vision, Microstarter &uStart, DigitalSensor &fSensor
-        DigitalSensor &rSensor, DigitalSensor &full_rSensor, DigitalSensor &lSensor, DigitalSensor &full_lSensor);
+        void update(Motor &rightMotor, Motor &leftMotor, Vision &vision, Microstarter &uStart, DigitalSensor &sensor_l
+        DigitalSensor &sensor_r, DigitalSensor &sensor_fl, DigitalSensor &sensor_fr, DigitalSensor &sensor_f);
         
 };
 
