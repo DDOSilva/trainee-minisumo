@@ -1,8 +1,6 @@
 #ifndef DIGITALSENSOR_H
 #define DIGITALSENSOR_H
 
-#include <iostream>
-
 class DigitalSensor{
 
     public:
