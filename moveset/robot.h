@@ -9,14 +9,14 @@
 #define MICROSTARTER_PIN
 
 #define RIGHT_MOTOR_PWM
-#define RIGHT_MOTOR_PIN1
-#define RIGHT_MOTOR_PIN2
+#define RIGHT_MOTOR_IN_PIN1
+#define RIGHT_MOTOR_IN_PIN2
 #define RIGHT_MOTOR_CHANNEL
 #define RIGHT_MOTOR_SPEED //nao tenho certeza desse
 
 #define LEFT_MOTOR_PWM
-#define LEFT_MOTOR_PIN1
-#define LEFT_MOTOR_PIN2
+#define LEFT_MOTOR_IN_PIN1
+#define LEFT_MOTOR_IN_PIN2
 #define LEFT_MOTOR_CHANNEL
 #define LEFT_MOTOR_SPEED //nao tenho certeza desse
 
@@ -41,7 +41,8 @@ class Moveset{
         DigitalSensor sensor_l;
         DigitalSensor sensor_fl;
 
-
+        void readSensor();
+        void fight();    
         void update(Motor &rightMotor, Motor &leftMotor, Vision &vision, Microstarter &uStart, DigitalSensor &sensor_l
         DigitalSensor &sensor_r, DigitalSensor &sensor_fl, DigitalSensor &sensor_fr, DigitalSensor &sensor_f);
         
