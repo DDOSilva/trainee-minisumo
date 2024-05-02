@@ -16,7 +16,7 @@ class Microstarter {
     public:
         int pin;
         ms_State::_state state; //state pode ser STOP (0) ou START (1)
-        void uptade();
+        void update();
         void Microstarter(int pin);
 
 };
