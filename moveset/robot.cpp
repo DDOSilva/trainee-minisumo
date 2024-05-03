@@ -8,8 +8,8 @@
 
 
 
-Moveset::Moveset() : rightMotor(RIGHT_MOTOR_PWM, RIGHT_MOTOR_IN_PIN1, RIGHT_MOTOR_IN_PIN2, RIGHT_MOTOR_SPEED, RIGHT_MOTOR_CHANNEL),
-                        leftMotor(LEFT_MOTOR_PWM, LEFT_MOTOR_IN_PIN1, LEFT_MOTOR_IN_PIN2, LEFT_MOTOR_SPEED, LEFT_MOTOR_CHANNEL),
+Moveset::Moveset() : rightMotor(RIGHT_MOTOR_CHANNEL, RIGHT_MOTOR_IN_PIN1, RIGHT_MOTOR_IN_PIN2, RIGHT_MOTOR_PWM, RIGHT_MOTOR_SPEED),
+                        leftMotor(LEFT_MOTOR_CHANNEL, LEFT_MOTOR_IN_PIN1, LEFT_MOTOR_IN_PIN2, LEFT_MOTOR_PWM, LEFT_MOTOR_SPEED),
                         sensor_f(FRONT_SENSOR_PIN),
                         sensor_l(LEFT_SENSOR_PIN),
                         sensor_fl(FULL_LEFT_SENSOR_PIN),
