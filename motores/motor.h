@@ -5,7 +5,7 @@ class Motor {
     
     public:
         int speed;
-        int pin_pwm;
+        int pwm;
         int pin_ch;
         int pin_1;
         int pin_2; 
@@ -13,7 +13,7 @@ class Motor {
         int speed_max = 100;
 
         void update ();
-        Motor (int pin_ch, int pin_1, int pin_2, int pin_pwm, int speed);
+        Motor (int pin_ch, int pin_1, int pin_2, int pwm, int cSpeed);
         void setspeed(int speed);
 
 };
