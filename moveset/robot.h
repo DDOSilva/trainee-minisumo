@@ -6,17 +6,18 @@
 #include "digital_sensor.h"
 #include "microstart.h"
 
-#define MICROSTARTER_PIN
+#define MICROSTARTER_PIN 24
+#define STDBY 26
 
-#define RIGHT_MOTOR_PWM
-#define RIGHT_MOTOR_IN_PIN1
-#define RIGHT_MOTOR_IN_PIN2
+#define RIGHT_MOTOR_PWM 21
+#define RIGHT_MOTOR_IN_PIN1 22
+#define RIGHT_MOTOR_IN_PIN2 25
 #define RIGHT_MOTOR_CHANNEL
 #define RIGHT_MOTOR_SPEED //nao tenho certeza desse
 
-#define LEFT_MOTOR_PWM
-#define LEFT_MOTOR_IN_PIN1
-#define LEFT_MOTOR_IN_PIN2
+#define LEFT_MOTOR_PWM 21
+#define LEFT_MOTOR_IN_PIN1 26
+#define LEFT_MOTOR_IN_PIN2 27
 #define LEFT_MOTOR_CHANNEL
 #define LEFT_MOTOR_SPEED //nao tenho certeza desse
 
