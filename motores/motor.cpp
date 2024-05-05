@@ -2,7 +2,7 @@
 #include <Arduino.h>
 #include "motor.h"
 
-Motor::Motor(int pin_ch, int pin_1, int pin_2 int pwm, int cSpeed) {}
+Motor::Motor(int pin_ch, int pin_1, int pin_2 int pwm, int cSpeed) {
     this->pin_ch = pin_ch;
     this->cSpeed = cSpeed;
     this->pwm = pwm;
