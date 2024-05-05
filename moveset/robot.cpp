@@ -8,7 +8,7 @@
 
 
 
-Moveset::Moveset() : rightMotor(RIGHT_MOTOR_CHANNEL, RIGHT_MOTOR_IN_PIN1, RIGHT_MOTOR_IN_PIN2, RIGHT_MOTOR_PWM, RIGHT_MOTOR_SPEED),
+Robot::Robot() : rightMotor(RIGHT_MOTOR_CHANNEL, RIGHT_MOTOR_IN_PIN1, RIGHT_MOTOR_IN_PIN2, RIGHT_MOTOR_PWM, RIGHT_MOTOR_SPEED),
                         leftMotor(LEFT_MOTOR_CHANNEL, LEFT_MOTOR_IN_PIN1, LEFT_MOTOR_IN_PIN2, LEFT_MOTOR_PWM, LEFT_MOTOR_SPEED),
                         sensor_f(FRONT_SENSOR_PIN),
                         sensor_l(LEFT_SENSOR_PIN),
@@ -20,7 +20,7 @@ Moveset::Moveset() : rightMotor(RIGHT_MOTOR_CHANNEL, RIGHT_MOTOR_IN_PIN1, RIGHT_
         this->uStart = Microstarter::STOP;
 }
 
-void Moveset::readSensor() {
+void Robot::readSensor() {
         this->sensor_f.update();
         this->sensor_l.update();
         this->sensor_fl.update();
@@ -28,14 +28,14 @@ void Moveset::readSensor() {
         this->sensor_fr.update();
 }
 
-void Moveset::fight() {
+void Robot::fight() {
         this->microstart.update();
         this->readsensor();
         this->vision.update(this->sensor_f, this->sensor_l, this->sensor_fl, this->sensor_r, this->sensor_fr);
         this->update();
 }
 
-void Moveset::update(Motor &rightMotor, Motor &leftMotor, Vision &vision, Microstarter &uStart, DigitalSensor &sensor_l
+void Robot::update(Motor &rightMotor, Motor &leftMotor, Vision &vision, Microstarter &uStart, DigitalSensor &sensor_l
         DigitalSensor &sensor_r, DigitalSensor &sensor_fl, DigitalSensor &sensor_fr, DigitalSensor &sensor_f) {
     
     if(uStart.update == START) { 

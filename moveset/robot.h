@@ -29,9 +29,9 @@
 
 
 
-class Moveset{
+class Robot{
     public:
-        Moveset();
+        Robot();
         Motor rightMotor;
         Motor leftMotor;
         Vision vision; 
