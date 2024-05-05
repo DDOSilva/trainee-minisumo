@@ -1,8 +1,6 @@
 #ifndef MICROSTARTER_H
 #define MICROSTARTER_H
 
-#include <iostream>
-
 
 namespace ms_State {
     enum _state {
