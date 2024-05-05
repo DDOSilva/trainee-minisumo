@@ -12,14 +12,14 @@
 #define RIGHT_MOTOR_PWM 21
 #define RIGHT_MOTOR_IN_PIN1 22
 #define RIGHT_MOTOR_IN_PIN2 25
-#define RIGHT_MOTOR_CHANNEL
-#define RIGHT_MOTOR_SPEED //nao tenho certeza desse
+#define RIGHT_MOTOR_CHANNEL 0
+#define RIGHT_MOTOR_SPEED 1.0
 
 #define LEFT_MOTOR_PWM 21
 #define LEFT_MOTOR_IN_PIN1 26
 #define LEFT_MOTOR_IN_PIN2 27
-#define LEFT_MOTOR_CHANNEL
-#define LEFT_MOTOR_SPEED //nao tenho certeza desse
+#define LEFT_MOTOR_CHANNEL 1
+#define LEFT_MOTOR_SPEED 1.0
 
 #define FRONT_SENSOR_PIN
 #define LEFT_SENSOR_PIN
