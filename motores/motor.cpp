@@ -15,7 +15,7 @@ void Motor::setspeed(int speed) {
     this->speed = speed;
     
     float fixSpeed = speed * this->cSpeed; //velocidade fixada sera usada dentro das condições do motor
-    int pwm100 = (int)(this->speed_max / (100.0 * 255.0) * ((float)abs(fixSpeed) / 100.0)); //conversao de -255 a 255 para -100 a 100
+    int pwm100 = (100.0 * 255.0) / (speed_max) * ((float)abs(fixSpeed) / 100.0); //conversao de -100 a 100 para -255 a 255
 
     if(fixSpeed < 0 && fixSpeed >= -220) { //alternando o estado dos pinos
         digitalWrite(this->pin_1, HIGH);   //quando anda pra tras -> pin 1 ligado
