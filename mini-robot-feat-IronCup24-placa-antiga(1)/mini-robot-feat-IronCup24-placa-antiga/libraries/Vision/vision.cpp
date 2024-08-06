@@ -3,7 +3,7 @@
 Vision::Vision()
 {}
 
-void Vision::updateEnemyPosition(DigitalSensor &front_sensor, DigitalSensor &full_left_sensor, DigitalSensor &full_right_sensor, DigitalSensor &left_sensor, DigitalSensor &right_sensor, AnalogSensor &left_line_sensor, AnalogSensor &right_line_sensor)
+void Vision::updateEnemyPosition(DigitalSensor &front_right_sensor, DigitalSensor &front_left_sensor, DigitalSensor &left_sensor, DigitalSensor &right_sensor, AnalogSensor &left_line_sensor, AnalogSensor &right_line_sensor)
 {
     if(left_line_sensor.in_line){
         this->line_position = LinePosition::LEFT_LINE;
@@ -11,18 +11,30 @@ void Vision::updateEnemyPosition(DigitalSensor &front_sensor, DigitalSensor &ful
     else if(right_line_sensor.in_line){
         this->line_position = LinePosition::RIGHT_LINE;
     }
-    else if (front_sensor.enemy_close)
+    else if (front_right_sensor.enemy_close && front_left_sensor.enemy_close)
     {
         this->enemy_position = EnemyPosition::FRONT;
         return;
     }
-    else if (full_right_sensor.enemy_close)
+    else if (front_right_sensor.enemy_close && right_sensor.enemy_close)
+    {
+        this->enemy_position = EnemyPosition::FRONT_RIGHT;
+        this->latest_enemy_position = EnemyPosition::RIGHT;
+        return;
+    }
+    else if (front_left_sensor.enemy_close && left_sensor.enemy_close)
+    {
+        this->enemy_position = EnemyPosition::FRONT_LEFT;
+        this->latest_enemy_position = EnemyPosition::LEFT;
+        return;
+    }
+    else if (front_right_sensor.enemy_close)
     {
         this->enemy_position = EnemyPosition::FULL_RIGHT;
         this->latest_enemy_position = EnemyPosition::RIGHT;
         return;
     }
-    else if (full_left_sensor.enemy_close)
+    else if (front_left_sensor.enemy_close)
     {
         this->enemy_position = EnemyPosition::FULL_LEFT;
         this->latest_enemy_position = EnemyPosition::LEFT;
