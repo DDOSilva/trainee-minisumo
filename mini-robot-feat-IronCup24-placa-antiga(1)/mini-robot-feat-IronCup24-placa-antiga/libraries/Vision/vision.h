@@ -17,7 +17,9 @@ namespace EnemyPosition
         FULL_LEFT,
         FULL_RIGHT,
         SEARCH_LEFT,
-        SEARCH_RIGHT
+        SEARCH_RIGHT,
+        FRONT_LEFT,
+        FRONT_RIGHT
     };
 }
 namespace LinePosition{
@@ -34,7 +36,7 @@ public:
     EnemyPosition::Pos latest_enemy_position;
     LinePosition::Pos line_position;
 
-    void updateEnemyPosition(DigitalSensor &front_sensor, DigitalSensor &full_left_sensor, DigitalSensor &full_right_sensor, DigitalSensor &left_sensor, DigitalSensor &right_sensor, AnalogSensor &left_line_sensor, AnalogSensor &right_line_sensor);
+    void updateEnemyPosition(DigitalSensor &front_right_sensor, DigitalSensor &front_left_sensor, DigitalSensor &left_sensor, DigitalSensor &right_sensor, AnalogSensor &left_line_sensor, AnalogSensor &right_line_sensor);
     Vision();
 };
 
