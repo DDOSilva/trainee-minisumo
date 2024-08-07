@@ -103,26 +103,26 @@ void AutoStrategy::updateMotors(Vision &vision, MotorControl &left_motor, MotorC
     }
     else if (vision.enemy_position == EnemyPosition::FRONT_LEFT)
     {
-        left_motor.setPower(50);
+        left_motor.setPower(60);
         right_motor.setPower(100);
         return;
     }
     else if (vision.enemy_position == EnemyPosition::FRONT_RIGHT)
     {
         left_motor.setPower(100);
-        right_motor.setPower(50);
+        right_motor.setPower(60);
         return;
     }
     else if (vision.enemy_position == EnemyPosition::LEFT)
     {
-        left_motor.setPower(30);
+        left_motor.setPower(40);
         right_motor.setPower(100);
         return;
     }
     else if (vision.enemy_position == EnemyPosition::RIGHT)
     {
         left_motor.setPower(100);
-        right_motor.setPower(30);
+        right_motor.setPower(40);
         return;
     }
     else if (vision.enemy_position == EnemyPosition::FULL_RIGHT)
@@ -139,14 +139,14 @@ void AutoStrategy::updateMotors(Vision &vision, MotorControl &left_motor, MotorC
     }
     else if (vision.enemy_position == EnemyPosition::SEARCH_LEFT)
     {
-        left_motor.setPower(10);
+        left_motor.setPower(15);
         right_motor.setPower(100);
         return;
     }
     else if (vision.enemy_position == EnemyPosition::SEARCH_RIGHT)
     {
         left_motor.setPower(100);
-        right_motor.setPower(10);
+        right_motor.setPower(15);
         return;
     }
 }
