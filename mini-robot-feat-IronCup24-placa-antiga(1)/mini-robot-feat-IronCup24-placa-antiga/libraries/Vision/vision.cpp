@@ -18,37 +18,37 @@ void Vision::updateEnemyPosition(DigitalSensor &front_right_sensor, DigitalSenso
     }
     else if (front_right_sensor.enemy_close && right_sensor.enemy_close)
     {
-        this->enemy_position = EnemyPosition::FRONT_RIGHT;
+        this->enemy_position = EnemyPosition::RIGHT;
         this->latest_enemy_position = EnemyPosition::RIGHT;
         return;
     }
     else if (front_left_sensor.enemy_close && left_sensor.enemy_close)
     {
-        this->enemy_position = EnemyPosition::FRONT_LEFT;
+        this->enemy_position = EnemyPosition::LEFT;
         this->latest_enemy_position = EnemyPosition::LEFT;
         return;
     }
     else if (front_right_sensor.enemy_close)
     {
-        this->enemy_position = EnemyPosition::FULL_RIGHT;
+        this->enemy_position = EnemyPosition::FRONT_RIGHT;
         this->latest_enemy_position = EnemyPosition::RIGHT;
         return;
     }
     else if (front_left_sensor.enemy_close)
     {
-        this->enemy_position = EnemyPosition::FULL_LEFT;
+        this->enemy_position = EnemyPosition::FRONT_LEFT;
         this->latest_enemy_position = EnemyPosition::LEFT;
         return;
     }
     else if (right_sensor.enemy_close)
     {
-        this->enemy_position = EnemyPosition::RIGHT;
+        this->enemy_position = EnemyPosition::FULL_RIGHT;
         this->latest_enemy_position = EnemyPosition::RIGHT;
         return;
     }
     else if (left_sensor.enemy_close)
     {
-        this->enemy_position = EnemyPosition::LEFT;
+        this->enemy_position = EnemyPosition::FULL_LEFT;
         this->latest_enemy_position = EnemyPosition::LEFT;
         return;
     }    

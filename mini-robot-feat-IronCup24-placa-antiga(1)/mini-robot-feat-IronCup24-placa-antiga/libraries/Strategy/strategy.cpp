@@ -101,6 +101,18 @@ void AutoStrategy::updateMotors(Vision &vision, MotorControl &left_motor, MotorC
         right_motor.setPower(100);
         return;
     }
+    else if (vision.enemy_position == EnemyPosition::FRONT_LEFT)
+    {
+        left_motor.setPower(50);
+        right_motor.setPower(100);
+        return;
+    }
+    else if (vision.enemy_position == EnemyPosition::FRONT_RIGHT)
+    {
+        left_motor.setPower(100);
+        right_motor.setPower(50);
+        return;
+    }
     else if (vision.enemy_position == EnemyPosition::LEFT)
     {
         left_motor.setPower(30);
